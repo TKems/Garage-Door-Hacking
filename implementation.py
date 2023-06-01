@@ -17,15 +17,15 @@ codeList = [int(x) for x in list(code)]
 codeList2 = [int(y) for y in list(code2)]
 
 decoded = secplus.decode_v2(codeList+codeList2)
-print("Decoded value: \n")
+print("Decoded value: ")
 print(decoded)
 
 print("Generating next value: \n")
 nextVal = secplus.encode_v2(decoded[0]+1, decoded[1])
-print("Raw binary output for next value: \n")
-print(nextVal)
-#print(''.join(str(e) for e in nextVal))
+print("Raw binary output for next value: ")
+#print(nextVal)
+print(''.join(str(e) for e in nextVal))
 #Sanity Check
 decodedNextVal = secplus.decode_v2(nextVal)
-print("Sanity check code the next value: \n")
+print("Sanity check code the next value: ")
 print(decodedNextVal)
